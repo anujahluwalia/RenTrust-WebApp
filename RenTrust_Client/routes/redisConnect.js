@@ -2,7 +2,7 @@
  * Created by shalin on 12/2/2016.
  */
 var redis = require('redis');
-var client = redis.createClient();
+var client = redis.createClient(6379, "redis");
 client.on("connect", function () {
     console.log("Redis is connected");
 });

@@ -39,7 +39,7 @@ app.use(session({
     duration: 30 * 60 * 1000,
     activeDuration: 5 * 60 * 1000,
     store: new mongoStore({
-        url: "mongodb://localhost:27017/airbnb"
+        url: "mongodb://mongodb:27017/airbnb"
     })
 }));
 
