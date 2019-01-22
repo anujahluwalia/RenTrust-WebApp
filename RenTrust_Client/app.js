@@ -30,6 +30,10 @@ var redis = require('./routes/redisConnect');
 
 
 var app = express();
+var port = process.env.PORT || 3000;
+app.listen(port, function () {
+    console.log('Listening on port ' + port + '!');
+});
 app.use(fileUpload());
 app.use(passport.initialize());
 app.use(session({

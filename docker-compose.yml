@@ -7,11 +7,12 @@ services:
         environment:
             - NODE_ENV=development
         ports:
-          - 8080:8080
+          - 8080:3000
         working_dir: /webapp
         entrypoint: node app.js
         links:
           - mongodb
+          - redis
 
     mongodb:
         image: mongo:latest
